@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.liang</groupId>
+    <artifactId>bubbo-test</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>server-consumer-8083</module>
+        <module>server-provider-8082</module>
+        <module>common-api</module>
+    </modules>
+    <name>bubbo-test</name>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>com.liang.App</start-class>
+        <java.version>1.8</java.version>
+        <dubbo.version>3.0.2</dubbo.version>
+    </properties>
+
+<dependencyManagement>
+        <dependencies>
+        <dependency>                                                                                                         
+            <groupId>org.springframework.boot</groupId>                                                                      
+            <artifactId>spring-boot-dependencies</artifactId>                                                                
+            <version>2.2.0.RELEASE</version>                                                                                         
+            <type>pom</type>                                                                                                 
+            <scope>import</scope>                                                                                            
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+
+
+    </dependencies>
+</dependencyManagement>
+</project>
